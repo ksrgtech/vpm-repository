@@ -18,12 +18,15 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-24.04
     env:
-      RUST_LOG: trace
+      RUST_LOG: debug
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
+      - name: Dump repository definition
+        run: |
+          cat ./index.json
       # Runs a set of commands using the runners shell
       - name: Initialize empty manifest
         run: |
@@ -38,6 +41,12 @@ jobs:
       - name: Add this repository as a VPM Repository
         run: |
           ./vrc-get repo add index.json
+      - name: vrc-get repo list
+        run: |
+          ./vrc-get repo list
+      - name: vrc-get info package
+        run: |
+          ./vrc-get info package io.github.kisaragieffective.resonite-import-helper
       - name: Test ResoniteImportHelper
         run: |
           ./vrc-get install io.github.kisaragieffective.resonite-import-helper
