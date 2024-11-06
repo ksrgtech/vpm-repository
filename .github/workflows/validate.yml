@@ -50,3 +50,6 @@ jobs:
       - name: Test ResoniteImportHelper
         run: |
           ./vrc-get install io.github.kisaragieffective.resonite-import-helper --prerelease
+      - name: Show files
+        run: |
+          find ./Packages
