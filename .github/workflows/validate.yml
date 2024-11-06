@@ -40,7 +40,7 @@ jobs:
           ./vrc-get --version
       - name: Add this repository as a VPM Repository
         run: |
-          ./vrc-get repo add index.json
+          ./vrc-get repo add https://raw.githubusercontent.com/ksrgtech/vpm-repository/79f06858874f64f116df66dd80a0510985f2f755/index.json
       - name: vrc-get repo list
         run: |
           ./vrc-get repo list
