@@ -49,4 +49,4 @@ jobs:
           ./vrc-get info package io.github.kisaragieffective.resonite-import-helper
       - name: Test ResoniteImportHelper
         run: |
-          ./vrc-get install io.github.kisaragieffective.resonite-import-helper
+          ./vrc-get install io.github.kisaragieffective.resonite-import-helper --prerelease
