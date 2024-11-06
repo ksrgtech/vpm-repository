@@ -1,0 +1,41 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "live" branch
+  push:
+  pull_request:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-24.04
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+      # Runs a set of commands using the runners shell
+      - name: Initialize empty manifest
+        run: |
+          mkdir Packages || true
+          touch Packages/vpm-manifest.json
+          echo '{}' > Packages/vpm-manifest.json
+      - name: Install vrc-get
+        run: |
+          curl -L https://github.com/vrc-get/vrc-get/releases/download/v1.8.2/x86_64-unknown-linux-musl-vrc-get > ./vrc-get
+          chmod +x ./vrc-get
+          ./vrc-get --version
+      - name: Add this repository as a VPM Repository
+        run: |
+          ./vrc-get repo add index.json
+      - name: Test ResoniteImportHelper
+        run: |
+          ./vrc-get install io.github.kisaragieffective.resonite-import-helper
