@@ -14,7 +14,8 @@
           "dependencies": {
             "com.unity.nuget.newtonsoft-json": "3.2.1"
           },
-          "url": "https://github.com/KisaragiEffective/ResoniteImportHelper/releases/download/0.1.15-packaging.2/build.zip"
+          "url": "https://github.com/KisaragiEffective/ResoniteImportHelper/releases/download/0.1.15-packaging.2/build.zip",
+          "zipSHA256": "27dd1ed1ccec3d10022b2c032cc10a27a42f740c12119f46b504af6d17aadcd1"
         }
       }
     }
