@@ -17,7 +17,8 @@ echo "version: $version"
 echo "GET $sha256sum_file_url"
 sha256sum="$(curl -sSL "$sha256sum_file_url" | tr -d '\n')"
 echo "GET $version_manifest_file_url"
-zip_download_url="https://raw.githubusercontent.com/KisaragiEffective/ResoniteImportHelper/releases/download/$version/vpm-src.zip"
+zip_download_url="https://github.com/KisaragiEffective/ResoniteImportHelper/releases/download/$version/vpm-src.zip"
+echo "ZIP is on $zip_download_url"
 version_manifest="$(
   curl -sSL "$version_manifest_file_url" \
   | jq \
