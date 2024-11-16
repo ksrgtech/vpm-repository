@@ -44,7 +44,7 @@
           "dependencies": {
             "com.unity.nuget.newtonsoft-json": "3.2.1"
           },
-          "url": "https://raw.githubusercontent.com/KisaragiEffective/ResoniteImportHelper/releases/download/0.1.16/vpm-src.zip",
+          "url": "https://github.com/KisaragiEffective/ResoniteImportHelper/releases/download/0.1.16/vpm-src.zip",
           "zipSHA256": "26deddfa741f9d19b7a63d08aa8b5a7b7966144805d3d87438d02d968de849a7"
         }
       }
