@@ -1,4 +1,8 @@
 {
+  "name": "ksrgtech packages",
+  "id": "io.github.ksrgtech.vrchat.repo",
+  "url": "https://raw.githubusercontent.com/ksrgtech/vpm-repository/refs/heads/live/index.json",
+  "author": "The ksrgtech Technology Teams",
   "packages": {
     "io.github.kisaragieffective.resonite-import-helper": {
       "versions": {
