@@ -121,6 +121,21 @@
           },
           "url": "https://github.com/KisaragiEffective/ResoniteImportHelper/releases/download/0.1.18-pre.3/vpm-src.zip",
           "zipSHA256": "5fcc552111a9a55089debe3cb92861f8c862033fe6d307cffac6ebf2dc08ce18"
+        },
+        "0.1.18-pre.4": {
+          "name": "io.github.kisaragieffective.resonite-import-helper",
+          "version": "0.1.18-pre.4",
+          "description": "Helper around importing to Resonite",
+          "displayName": "Resonite Import Helper",
+          "unity": "2022.3",
+          "peerDependencies": {
+            "com.vrmc.gltf": "0.128.0"
+          },
+          "dependencies": {
+            "com.unity.nuget.newtonsoft-json": "3.2.1"
+          },
+          "url": "https://github.com/KisaragiEffective/ResoniteImportHelper/releases/download/0.1.18-pre.4/vpm-src.zip",
+          "zipSHA256": "cd5391daae2738848d641910a33ab1d41be6980cef5d15cc4a8413406d8f8710"
         }
       }
     }
