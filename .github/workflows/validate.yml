@@ -15,6 +15,8 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
+    permissions: 
+      contents: read
     # The type of runner that the job will run on
     runs-on: ubuntu-24.04
     env:
@@ -22,8 +24,9 @@ jobs:
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - name: Dump repository definition
         run: |
           cat ./index.json
